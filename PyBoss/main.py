@@ -24,7 +24,10 @@ while counter < 2:
             first.append(f)
             l = row[1][space+1:]
             last.append(l)
-            dob.append(row[2])
+            year = row[2][:4]
+            month = row[2][5:7]
+            day = row[2][8:]
+            dob.append(month+'/'+day+'/'+year)
             new_ssn = "***-**-"+row[3][7:]
             ssn.append(new_ssn)
             abb = us_state_abbrev.us_state_abbrev[row[4]]
