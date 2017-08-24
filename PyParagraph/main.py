@@ -19,6 +19,8 @@ with open(new_text, "r") as full:
         if char == "." or char == "!" or char == "?":
             sent_count = sent_count + 1
             counter = counter - 1
+        elif char == " " or char == "," or char == ";" or char == ":":
+            counter = counter - 1
         # add to letter count
         counter = counter + 1
 # change counter from integer to float or calculations will round off as integers
